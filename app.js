@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const recipeRoute = require('./routes/recipe');
+const biryani  = require('./controllers/biryani');
+app.use('/biryani', biryani);
 app.use('/recipe', recipeRoute);
 app.use(cors())
 app.use(express.json());
